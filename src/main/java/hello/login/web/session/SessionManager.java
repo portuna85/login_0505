@@ -28,7 +28,6 @@ public class SessionManager {
         // Cookie 생성
         Cookie mySessionCookie = new Cookie(SESSION_COOKIE_NAME, sessionId);
         response.addCookie(mySessionCookie);
-
     }
 
     /**
