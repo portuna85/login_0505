@@ -1,6 +1,9 @@
 package hello.login.web.interceptor;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -10,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
 @Slf4j
+@Component
+@RequiredArgsConstructor
 public class LogInterceptor implements HandlerInterceptor {
 
     public static final String LOG_ID = "logId";
@@ -27,7 +32,7 @@ public class LogInterceptor implements HandlerInterceptor {
             HandlerMethod hm = (HandlerMethod) handler;     // 호출할 컨트롤러 메서드의 모든 정보 포함
         }
 
-        log.info("REQUEST [{}][{}][{}]", uuid, requestURI, handler);
+        log.info("REQUEST ddd [{}][{}][{}]", uuid, requestURI, handler);
         return true;        // false 진행 X
     }
 
