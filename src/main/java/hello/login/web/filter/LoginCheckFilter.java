@@ -16,6 +16,7 @@ import java.net.http.HttpResponse;
 
 @Slf4j
 @RequiredArgsConstructor
+@Component
 public class LoginCheckFilter implements Filter {
 
     private static final String[] whiteList = {"/", "/members/add", "/login", "/logout", "/css/*"};

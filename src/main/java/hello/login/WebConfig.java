@@ -27,6 +27,8 @@ public class WebConfig implements WebMvcConfigurer {
         resolvers.add(new LoginMemberArgumentResolver());
     }
 
+    @Autowired
+    LoginCheckFilter loginCheckFilter;
 
     @Autowired
     LoginCheckInterceptor loginCheckInterceptor;
